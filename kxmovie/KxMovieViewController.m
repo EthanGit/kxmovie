@@ -251,7 +251,7 @@ static NSMutableDictionary * gHistory;
     _topHUD.opaque = NO;
     _bottomHUD.opaque = NO;
     
-    _topHUD.frame = CGRectMake(0,0,width,30);
+    _topHUD.frame = CGRectMake(0,64,width,30);
     _bottomHUD.frame = CGRectMake(30,height-(75+15),width-(30*2),75);
     
     _topHUD.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -393,7 +393,11 @@ static NSMutableDictionary * gHistory;
         _leftLabel.hidden = YES;
         _infoButton.hidden = YES;
     }
+    
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -1380,6 +1384,8 @@ static NSMutableDictionary * gHistory;
                          CGFloat alpha = _hiddenHUD ? 0 : 1;
                          _topHUD.alpha = alpha;
                          _bottomHUD.alpha = alpha;
+                         
+                         self.navigationController.navigationBarHidden = !alpha;
                      }
                      completion:nil];
     

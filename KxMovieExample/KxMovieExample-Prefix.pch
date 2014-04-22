@@ -12,3 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
