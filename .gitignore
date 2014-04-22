@@ -26,4 +26,6 @@ libs/*
 output/*
 plan
 
+# 但是要追蹤 lib.a，即使上方已指定忽略所有的 .a 檔案
+!lib.a
 
